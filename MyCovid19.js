@@ -202,7 +202,7 @@ Module.register("MyCovid19", {
         let newCases = lastCaseEntry - yesterDayCaseEntry;
         let newCasesComparedToYesterdays = (yesterDayCaseEntry - dayBeforeyesterDayCaseEntry)
         // Compare and show stat information
-        document.getElementById('cases_text').innerHTML = `<div style='color:white; border:1px solid red;'>Total: ${lastCaseEntry}<span style='color:white; font-size:20px'> (New: ${newCases}</span><span style='color:white;font-size:20px'>Before: ${newCasesComparedToYesterdays})</span></div>`;
+        document.getElementById('cases_text').innerHTML = `<div style='color:white; border:1px solid red;'>Total: ${lastCaseEntry}<span style='color:white; font-size:20px'> (New: ${newCases}</span><span style='color:white;font-size:20px'>/Before: ${newCasesComparedToYesterdays})</span></div>`;
         document.getElementById('cases_text').style.textAlign = 'center';
 
 
