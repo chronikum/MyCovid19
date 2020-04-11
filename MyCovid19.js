@@ -200,7 +200,9 @@ Module.register("MyCovid19", {
         let yesterDayCaseEntry = self.our_data[this_country][self.config.chart_type][self.our_data[this_country][self.config.chart_type].length - 2].y
         let newCases = lastCaseEntry - yesterDayCaseEntry;
         // Compare and show stat information
-        document.getElementById('cases_text').innerHTML = ` / Total: ${lastCaseEntry}(${newCases})`;
+        document.getElementById('cases_text').innerHTML = `<div style='color:white; border:1px solid red;'>Total: ${lastCaseEntry}<span style='color:red'> (New Cases: ${newCases})</span></div>`;
+        document.getElementById('cases_text').style.textAlign = 'center';
+
 
         for (var x in self.config[self.config.type]) {
           if (self.our_data[self.config[self.config.type][x]] != undefined) {
